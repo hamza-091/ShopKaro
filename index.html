@@ -314,7 +314,17 @@ footer{background:var(--nv);color:#aaa;padding:38px 0 18px;margin-top:28px;}
   .hero-carousel{height:280px;}
 }
 @media(max-width:600px){
-  .cat-grid{grid-template-columns:repeat(3,1fr);}
+  .cat-grid{grid-template-columns:repeat(3,1fr);} 
+  /* Mobile header adjustments: center logo, search and actions */
+  .topbar .container{align-items:center;}
+  .topbar-msg{display:none;}
+  .topbar-links{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:6px;}
+  .hdr{align-items:center;}
+  .hdr .logo{order:1;width:100%;text-align:center;margin:8px 0;font-size:32px;}
+  .srchbar{order:2;width:100%;min-width:0;padding:0 12px;}
+  .srchbar input{width:calc(100% - 72px);} 
+  .hdr-btns{order:3;width:100%;display:flex;justify-content:center;gap:10px;margin:8px 0;}
+
   .prod-grid{grid-template-columns:repeat(2,1fr);}
   .promo-grid{grid-template-columns:1fr;}
   .vals-grid{grid-template-columns:1fr;}
@@ -334,8 +344,8 @@ footer{background:var(--nv);color:#aaa;padding:38px 0 18px;margin-top:28px;}
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="container">
-    <span>🇵🇰 Pakistan's #1 Online Shopping Marketplace — Free Delivery on orders above Rs.500</span>
-    <div>
+    <span class="topbar-msg">🇵🇰 Pakistan's #1 Online Shopping Marketplace — Free Delivery on orders above Rs.500</span>
+    <div class="topbar-links">
       <a onclick="trackOrder()">📦 Track Order</a>
       <a onclick="gp('about')">About ShopKaro</a>
       <a onclick="gp('contact')">Help & Support</a>
